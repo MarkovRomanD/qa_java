@@ -30,17 +30,13 @@ public class LionParamTest {
     }
 
     @Test
-    public void doesHaveManeParameterizedTest() {
-        try {
-            Lion lion = new Lion(new Feline(), sex);
-            boolean actual = lion.doesHaveMane();
-            Assert.assertEquals("Некорректно заполнился пол льва",
-                    expected,
-                    actual);
-        } catch (Exception ex) {
-            Assert.assertEquals("Не ожидаемая ошибка",
-                    "Используйте допустимые значения пола животного - самец или самка",
-                    ex.getMessage());
-        }
+    public void doesHaveManeParameterizedTest() throws Exception {
+
+        Lion lion = new Lion(new Feline(), sex);
+        boolean actual = lion.doesHaveMane();
+        Assert.assertEquals("Некорректно заполнился пол льва",
+                expected,
+                actual);
+
     }
 }

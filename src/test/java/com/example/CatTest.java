@@ -13,7 +13,7 @@ import java.util.List;
 public class CatTest {
 
     @Mock
-    Feline feline;
+    private Feline feline;
 
     @Test
     public void getFoodMockedMeatListTest() throws Exception {
@@ -22,8 +22,8 @@ public class CatTest {
         Mockito.when(feline.eatMeat()).thenReturn(expected);
         var actual = cat.getFood();
         Assert.assertEquals("Не тот список еды",
-                actual,
-                expected);
+                expected,
+                actual);
     }
 
     @Test
