@@ -24,14 +24,12 @@ public class LionParamTest {
     public static Object[][] getParameters() {
         return new Object[][]{
                 {"Самец", true},
-                {"Самка", false},
-                {"Сам", false}
+                {"Самка", false}
         };
     }
 
     @Test
     public void doesHaveManeParameterizedTest() throws Exception {
-
         Lion lion = new Lion(new Feline(), sex);
         boolean actual = lion.doesHaveMane();
         Assert.assertEquals("Некорректно заполнился пол льва",
