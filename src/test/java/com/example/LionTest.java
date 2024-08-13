@@ -26,4 +26,9 @@ public class LionTest {
                 expected,
                 actual);
     }
+
+    @Test
+    public void lionConstructorIncorrectSexThrowsException() {
+        Assert.assertThrows(Exception.class, () -> new Lion(new Feline(), "Проверка эксепшена"));
+    }
 }
